@@ -46,4 +46,6 @@ in our 'Smart Component' (TopicsScreen.js) we add componentDidMount and dispatch
 *Note to remember all app 'State ' must be contained in the store. (If we ever wanted to implement a login we would to rovide every servbice function with login information as argument and hold the login state in one our 'reducers')
 
 
-Rule: Smart components should always access state through 'selectors.'
+Rule: Smart components should always access state through 'selectors.
+'Selectors': one of the most important constructs in Redux. Its a pure function that takes the global state as arguemnt and returns some transformation over it. 'Selectors' are tightly coupled to reducers and located inside of 'reducer.js'.
+they allow us to perform a few calculations on teh data before its being consumed by the view.
