@@ -1,5 +1,5 @@
 create-react-app <name of project>
-npm install redux, react-redux and redux-thunk
+npm install redux, react-redux and redux-thunk,  seamless-immutable
 Initialize the Redux store and hook up thunk middleware in index.js
 Redux is an implementation of the flux architecture( a pattern for passing data around in a React App)
 *Classic Flux: app state is held within stores. Dispatched actions cause this state to change, after which the views listen to these state changes will re-render themselves accordingly.
