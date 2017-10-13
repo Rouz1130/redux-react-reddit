@@ -31,3 +31,7 @@ For this example our app 'state'. for this tutorial we have two pages. We will s
 -First page will have a 'List'(topics) retrieved from the server.
 -Also we will need to hold 'ID's' from the 'List'(in our case our list is topics). were allowing user to choose the topics(max of 3 for this tutorial).
 -the 'list'(topics) will be hold in order they were selected. (so if user chooses 4 from 'list'(topic)the oldest from list is automatically dropped).
+
+In Redux the 'reducer' is the construct that holds 'state' and updates it.
+Our code will be organized by domains, so our natural place for the reducer will be src/store/topcs/reducer.js
+boilerplates to create a 'reducer': Immutability of our 'state'(required by redux) we use library called 'seamless-immutable'.
