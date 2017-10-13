@@ -1,3 +1,26 @@
 create-react-app <name of project>
 npm install redux, react-redux and redux-thunk
 Initialize the Redux store and hook up thunk middleware in index.js
+Redux is an implementation of the flux architecture( a pattern for passing data around in a React App)
+*Classic Flux: app state is held within stores. Dispatched actions cause this state to change, after which the views listen to these state changes will re-render themselves accordingly.
+Store: Holds the global app state.
+React Views: Connected React components listen on parts of the store.
+Action Handlers: Most business logic and side effects are implemented here.
+(store pass 'Props' to the 'View' the view dispatch the 'action' to Action-Handlers then the A-H updates 'State' to store. )
+Flux simplifies data flow in a single direction.
+Flux key terms: 'Reducers', 'Selectors', 'thunks'.Various names of Redux constructs that implement the different parts of the cycle.
+Explanation of these terms and there contribution to the different parts of the cycle.
+'Selectors': digest parts of the state to make easier props for the views.
+'map state to props': connected components specify what state they want as props.
+'thunks': async, dispatch other action sand do side-effects.
+'reducers': update state, taking state + action and return new state.
+
+PROJECT DIRECTORY STRUCTURE:
+/src/components: 'dumb' React components that have no knowledge of redux
+/src/containers: 'smart' React components that are connected to our redux store.
+/src/services: Abstraction facades for external API(like backend servers).
+/src/store: All Redux-specific code goes here, including all business-logic of our app.
+
+'store' directory is organized by domain , each containing:
+/src/store/{domain}/reducers.js: Reducer as a default export with all selectors names as exports.
+/src/store/{domain}/action.js: All the domain action handlers (thunks and plain object creators)
