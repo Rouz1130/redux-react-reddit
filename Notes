@@ -1,0 +1,3 @@
+create-react-app <name of project>
+npm install redux, react-redux and redux-thunk
+Initialize the Redux store and hook up thunk middleware in index.js
