@@ -35,3 +35,9 @@ For this example our app 'state'. for this tutorial we have two pages. We will s
 In Redux the 'reducer' is the construct that holds 'state' and updates it.
 Our code will be organized by domains, so our natural place for the reducer will be src/store/topcs/reducer.js
 boilerplates to create a 'reducer': Immutability of our 'state'(required by redux) we use library called 'seamless-immutable'.
+
+OUR FIRST SCENARIO
+After modeling our 'state'. Create first page and display some lists(topics) as soon as they are shown up.
+'Smart component' will be connected to our 'reducer' and we place it in src/'containers'/TopicsScreen.js(or list.js or whatever you are creating).
+There are some boilerplates to create a connected component.
+'Smart components' are not allowed to have any logic except dispatching actions.
