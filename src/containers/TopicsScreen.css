@@ -1,13 +1,13 @@
 .TopicsScreen {
-  padding 20px;
+  padding: 20px;
 }
 
 .TopicsScreen ul {
-  list-style: : none;
-  padding-left: :0;
+  list-style: none;
+  padding-left: 0;
   width: 640px;
   margin: auto;
-  border 1px solid #aaa;
+  border: 1px solid #aaa;
 }
 
 .TopicsScreen li {

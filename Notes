@@ -49,3 +49,7 @@ in our 'Smart Component' (TopicsScreen.js) we add componentDidMount and dispatch
 Rule: Smart components should always access state through 'selectors.
 'Selectors': one of the most important constructs in Redux. Its a pure function that takes the global state as arguemnt and returns some transformation over it. 'Selectors' are tightly coupled to reducers and located inside of 'reducer.js'.
 they allow us to perform a few calculations on teh data before its being consumed by the view.
+
+'Dumb Component' not connected to the store nor connected or aware of redux. Dumb components are contained in components folder, smart components are contained in containers.
+-DC recieve data from their paretns through props and may hold local component state. and example is TEXTInput component the caret positon is an excellent example of our local component state that should not find its way into your global app state.
+RULE: Minimize view logic in smart components by extracting it into dumb components.
