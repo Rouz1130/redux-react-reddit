@@ -14,7 +14,10 @@ class TopicsScreen extends Component {
 }
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    rowsById: topicsSelectors.getTopicsByUrl(state),
+    rowsIdArray: topicsSelectors.getTopicsByUrlArray(state)
+  };
 }
 
 export default connect(mapStateToProps)(TopicsScreen);

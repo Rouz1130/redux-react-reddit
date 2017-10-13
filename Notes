@@ -41,3 +41,9 @@ After modeling our 'state'. Create first page and display some lists(topics) as 
 'Smart component' will be connected to our 'reducer' and we place it in src/'containers'/TopicsScreen.js(or list.js or whatever you are creating).
 There are some boilerplates to create a connected component.
 'Smart components' are not allowed to have any logic except dispatching actions.
+
+in our 'Smart Component' (TopicsScreen.js) we add componentDidMount and dispatch an action that will fetch the topics(or lists or whatever you decide).
+*Note to remember all app 'State ' must be contained in the store. (If we ever wanted to implement a login we would to rovide every servbice function with login information as argument and hold the login state in one our 'reducers')
+
+
+Rule: Smart components should always access state through 'selectors.'
