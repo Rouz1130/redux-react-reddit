@@ -7,7 +7,13 @@ import App from './App';
 import './index.css';
 
 import * as reducers from './store/reducers';
+
+// Initialize redux store. And Hook up thunk middleware.
 const store = createStore(combineReducers(reducers), applyMiddleware(thunk));
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);

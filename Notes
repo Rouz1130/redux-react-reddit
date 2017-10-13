@@ -24,3 +24,10 @@ PROJECT DIRECTORY STRUCTURE:
 'store' directory is organized by domain , each containing:
 /src/store/{domain}/reducers.js: Reducer as a default export with all selectors names as exports.
 /src/store/{domain}/action.js: All the domain action handlers (thunks and plain object creators)
+
+A STATE-FRIST APPROACH:
+Easiest way to approach this architecture is start with 'state'.
+For this example our app 'state'. for this tutorial we have two pages. We will start with the first page.
+-First page will have a 'List'(topics) retrieved from the server.
+-Also we will need to hold 'ID's' from the 'List'(in our case our list is topics). were allowing user to choose the topics(max of 3 for this tutorial).
+-the 'list'(topics) will be hold in order they were selected. (so if user chooses 4 from 'list'(topic)the oldest from list is automatically dropped).
