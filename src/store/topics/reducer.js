@@ -45,3 +45,7 @@ export function getSelectedTopicUrls(state) {
 export function getSelectedTopicUrlsMap(state)b {
   return _.keyBy(state.topics.selectedTopicsUrls)
 }
+
+export function isTopicSelectionValid(state) {
+  return state.topics.selectedTopicsUrls.length === 3;
+}

@@ -51,10 +51,22 @@ Rule: Smart components should always access state through 'selectors.
 they allow us to perform a few calculations on teh data before its being consumed by the view.
 
 'Dumb Component' not connected to the store nor connected or aware of redux. Dumb components are contained in components folder, smart components are contained in containers.
--DC recieve data from their paretns through props and may hold local component state. and example is TEXTInput component the caret positon is an excellent example of our local component state that should not find its way into your global app state.
+-DC receive data from their parents through props and may hold local component state. and example is TEXTInput component the caret positon is an excellent example of our local component state that should not find its way into your global app state.
 RULE: Minimize view logic in smart components by extracting it into dumb components.
 
 
 SELECTION ON ONE PAGE THAT REDIRECTS TO ANOTHER PAGE'
 As you can see, almost every action we export (to be dispatched by views) is a thunk. TopicsScreen. Smart component(topicsScreen) cannot contain any business logic. we make it 'Thunk'.
 so our topisScreen has to handle the action of user clicking a topic. But the actions cannot be handled by our smart component(topicsScreen) we add action to topics action.js
+
+A few words about business logic
+One of the goals of a good methodology is achieving proper separation between views and business logic. Where was our business logic implemented so far?
+
+/src/store directory is where our business logic is.
+most of it inside 'thunks' in action.js
+some of it inside 'selectors' in reducer.js.
+RULE: Place all business logic inside action handlers(thunks), selectors and reducers
+
+
+NAVIGATING PAGES.
+Typically when we navigate pages we will use react-router. But for this tutorial we wont do that. 
